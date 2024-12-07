@@ -10,16 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.4.1",
+    "axios": "^1.6.7",
+    "date-fns": "^3.3.1",
+    "framer-motion": "^11.0.8",
+    "html-to-image": "^1.11.11",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.22.3",
-    "axios": "^1.6.7",
-    "date-fns": "^3.3.1",
-    "recharts": "^2.12.2",
-    "framer-motion": "^11.0.8",
-    "html-to-image": "^1.11.11",
-    "react-hot-toast": "^2.4.1"
+    "recharts": "^2.12.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",

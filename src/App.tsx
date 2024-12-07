@@ -9,6 +9,7 @@ import ShareButton from "./components/ShareButton";
 import { fetchGitHubUser } from "./services/github";
 import { GitHubUser } from "./types/github";
 import "./styles/glass.css";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [user, setUser] = useState<GitHubUser | null>(null);
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+      <Analytics />
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1800')] bg-cover bg-center opacity-10" />
 
       <div className="relative">
