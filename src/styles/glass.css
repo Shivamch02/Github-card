@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply glass rounded-2xl;
+  }
+  
+  .glass-button {
+    @apply glass px-4 py-2 rounded-xl hover:bg-white/20 transition-all duration-300 text-white;
+  }
+  
+  .glass-input {
+    @apply glass bg-white/5 px-4 py-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/30;
+  }
+  
+  .glass-hover {
+    @apply hover:bg-white/15 transition-all duration-300;
+  }
+}
