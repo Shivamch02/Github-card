@@ -22,4 +22,9 @@ export interface Repository {
   fork: boolean;
 }
 
-export type Tagline = 'Grand Master' | 'Master' | 'Top Ranker' | 'Intermediate' | 'Newbie';
+export type Tagline =
+  | "Grand Master"
+  | "Master"
+  | "Top Ranker"
+  | "Intermediate"
+  | "Newbie";

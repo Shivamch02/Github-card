@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Github, Search, Share2, Code, Twitter, Globe } from 'lucide-react';
-import GlassButton from './ui/GlassButton';
+import React from "react";
+import { motion } from "framer-motion";
+import { Github, Twitter, Globe } from "lucide-react";
+import GlassButton from "./ui/GlassButton";
 
 const Header: React.FC = () => {
   return (
@@ -20,25 +20,27 @@ const Header: React.FC = () => {
               <p className="text-sm text-white/70">Share your GitHub journey</p>
             </div>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-4">
-            <GlassButton
+            {/* <GlassButton
               icon={Search}
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Search
-            </GlassButton>
-            
+            </GlassButton> */}
+
             <GlassButton
               icon={Twitter}
-              onClick={() => window.open('https://twitter.com/_cvam', '_blank')}
+              onClick={() => window.open("https://x.com/_cvam", "_blank")}
             >
               Twitter
             </GlassButton>
-            
+
             <GlassButton
               icon={Globe}
-              onClick={() => window.open('https://cvam.dev', '_blank')}
+              onClick={() =>
+                window.open("https://shivamchaurasiya.vercel.app", "_blank")
+              }
             >
               Portfolio
             </GlassButton>

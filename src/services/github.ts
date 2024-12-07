@@ -1,14 +1,14 @@
-import axios from 'axios';
-import { GitHubUser, Repository } from '../types/github';
+import axios from "axios";
+import { GitHubUser, Repository } from "../types/github";
 
-const GITHUB_API = 'https://api.github.com';
+const GITHUB_API = "https://api.github.com";
 
 export async function fetchGitHubUser(username: string): Promise<GitHubUser> {
   try {
     const [userResponse, eventsResponse, reposResponse] = await Promise.all([
       axios.get(`${GITHUB_API}/users/${username}`),
       axios.get(`${GITHUB_API}/users/${username}/events`),
-      axios.get(`${GITHUB_API}/users/${username}/repos?sort=stars&per_page=4`)
+      axios.get(`${GITHUB_API}/users/${username}/repos?sort=stars&per_page=4`),
     ]);
 
     const events = eventsResponse.data;
@@ -39,16 +39,16 @@ export async function fetchGitHubUser(username: string): Promise<GitHubUser> {
       stars: repo.stargazers_count,
       language: repo.language,
       url: repo.html_url,
-      fork: repo.fork
+      fork: repo.fork,
     }));
 
     return {
       ...userResponse.data,
       contributions,
       streak,
-      repositories
+      repositories,
     };
   } catch (error) {
-    throw new Error('Failed to fetch GitHub user data');
+    throw new Error("Failed to fetch GitHub user data");
   }
 }

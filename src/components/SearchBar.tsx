@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Search } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { Search } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface SearchBarProps {
   onSearch: (username: string) => void;
@@ -8,7 +8,7 @@ interface SearchBarProps {
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading }) => {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,10 +33,10 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading }) => {
             <Search className="w-6 h-6 text-white/50" />
           </div>
         </div>
-        
+
         <motion.button
           type="submit"
-          className="absolute right-2 top-1/2 -translate-y-1/2 glass-button px-6 py-2"
+          className="absolute right-2 top-2.5 glass-button px-6 py-2"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           disabled={isLoading}
@@ -47,7 +47,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading }) => {
               Searching...
             </div>
           ) : (
-            'Search'
+            "Search"
           )}
         </motion.button>
       </form>
